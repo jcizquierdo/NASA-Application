@@ -2,6 +2,7 @@ let main = document.getElementById('main');
 
 
 function fetchNearEarthObjects() {
+  event.preventDefault();
   let date = document.getElementById('searchDate').value;
   console.log("date="+date);
       fetch('https://api.nasa.gov/neo/rest/v1/feed?start_date='+date+'&end_date='+date+

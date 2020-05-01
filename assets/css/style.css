@@ -7,3 +7,15 @@
     height: 450px;
     width: auto;
 }
+
+#search-form {
+    padding-top: 20px;
+}
+
+.nav {
+    display: flex;
+}
+
+.menu-text {
+    font-size: 26px;
+}

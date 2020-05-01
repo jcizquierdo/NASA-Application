@@ -2,3 +2,8 @@
     background: url("images/space.jpg") no-repeat center fixed;
     background-size: cover;
 }
+
+#map-id {
+    height: 450px;
+    width: auto;
+}

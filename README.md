@@ -1,3 +1,3 @@
 # NASA-Application
 # 
-# Developed by JC Izquierdo, Russel Morgan, Vanessa Gonzales, and Conrad Trost
+# Developed by JC Izquierdo, Russell Morgan, Vanessa Gonzales, and Conrad Trost

@@ -13,6 +13,8 @@ var iss_icon = L.icon({
 })
 
 var iss = L.marker([0, 0], {icon: iss_icon}).addTo(map);
+
+map.setView([0, 0], 2);
 // ISS Lat and Lon Condition API
 
 function moveISS () {
@@ -27,6 +29,6 @@ function moveISS () {
         map.panTo([lat, lon], animate=true);
         containment.append(map);
     });
-    setTimeout(moveISS, 5000); 
+    setTimeout(moveISS, 500); 
 }
 moveISS();

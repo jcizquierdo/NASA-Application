@@ -25,7 +25,7 @@ function fetchNearEarthObjects() {
 
           // Name of Object
           var name = response.near_earth_objects[date][x].name;
-          $('#'+x).append('<div class="card-divider">'+name+'</div>');
+          $('#'+x).html('<div class="card-divider">'+name+'</div>');
 
           // Diameter 
           let diamRef = response.near_earth_objects[date][x].estimated_diameter.meters

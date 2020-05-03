@@ -38,7 +38,7 @@
 }
 
 .search-box {
-    width: 95px;
+    width: 98px;
     background: transparent;
     border-radius: 10px;
     color: honeydew;
@@ -51,3 +51,14 @@
 div.ui-datepicker{
     font-size:10px;
    }
+
+.card {
+    background-color: transparent;
+    font-family: 'Oswald', sans-serif;
+    color: honeydew;
+}
+
+.card-divider {
+    background-color: rgb(37, 35, 35);
+    
+}

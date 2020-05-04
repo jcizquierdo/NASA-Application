@@ -20,7 +20,7 @@ function fetchNearEarthObjects() {
 
         for (let x = 0; x < neoLength; x++) {
           // Create Card Div 
-          $('#main').append('<div id='+x+' class="card"></div>');
+          $('#main').append('<div id='+x+' class="card cell small-6 large-4"></div>');
           $('this').addClass('info-contain');
 
           // Name of Object
@@ -40,3 +40,5 @@ function fetchNearEarthObjects() {
         
       });
 }
+
+// Add if hazardous or not

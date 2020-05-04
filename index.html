@@ -22,7 +22,7 @@
         <!-- nav bar -->
         <div class="top-bar">
             <div class="top-bar-left">
-                <span class="title">Near Earth Orbit Objects</span>
+                <span class="title">NEOO</span>
             </div>
             <div class="top-bar-right" id="search-form">
                 <div class="enter-date">Enter Date</div>
@@ -30,10 +30,15 @@
                 <input type="submit" class="button" value="Search" onclick="fetchNearEarthObjects()">
             </div>
         </div>
+        <div class="main-body">
         <!-- description paragraph -->
-        <div class="description"></div>
-        <!-- grid -->
-        <div class="grid-x grid-margin-x small-up-2 medium-up-3 main"  id="main"></div>
+            <div class="description">
+                <h3>Near Earth Orbiting Objects</h3>
+                <p>Search any date to see which objects were near Earth on that day!</p>
+            </div>
+            <!-- grid -->
+            <div class="grid-x grid-margin-x small-up-2 medium-up-3 main"  id="main"></div>
+        </div>
         <!-- ISS map -->
         <div class="container" id="map-id"></div>
 

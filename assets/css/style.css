@@ -62,3 +62,12 @@ div.ui-datepicker{
     background-color: rgb(37, 35, 35);
     
 }
+
+.description {
+    color: white;
+}
+
+.main-body {
+    padding-left: 20px;
+    padding-right: 20px;
+}

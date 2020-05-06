@@ -40,10 +40,11 @@ function fetchNearEarthObjects() {
             $('#'+x).addClass('red')
             hazardous = 'Yes!';
           }  else {
+            $('#'+x).addClass('green')
             hazardous = 'No.';
           }
           $('#'+x).append('<div class="card-section">Is it hazardous to us? '+hazardous+ '</div>')
-          // console.log(hazardous);
+          
 
           // JPL URL
           var url = response.near_earth_objects[date][x].nasa_jpl_url;

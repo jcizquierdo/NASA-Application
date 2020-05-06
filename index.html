@@ -25,6 +25,11 @@
                 <span class="title">NEOO</span><span class="title-description">(Near Earth Orbiting Objects)</span>
             </div>
             <div class="top-bar-right" id="search-form">
+                <!-- Location ISS input -->
+                <div class="enter-location">Enter Location for ISS</div>
+                <input type="text" id="searchLocation" placeholder="City Name" class="location-box">
+                <input type="submit" class="button" value="Search" onclick="()">
+                <!-- Date JBL input -->
                 <div class="enter-date">Enter Date</div>
                 <input type="text" id="searchDate" placeholder="YYYY-MM-DD" class="search-box">
                 <input type="submit" class="button" value="Search" onclick="fetchNearEarthObjects()">

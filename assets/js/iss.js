@@ -1,5 +1,7 @@
 var containment = $("#map-id")
 // Map Variables
+
+
 var map = L.map('map-id').setView([0, 0], 1);
 
 
@@ -31,5 +33,16 @@ function moveISS () {
     });
     setTimeout(moveISS, 500); 
 }
-moveISS();
 
+function ISStracker() {
+    $('.description').html('<p>Welcome to the ISS Tracker</p>')
+    $('#map-id').show();
+    $('#main').hide();
+    moveISS();
+}
+
+function hideISS() {
+    $('#map-id').hide()
+}
+
+hideISS();

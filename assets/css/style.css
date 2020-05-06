@@ -114,3 +114,7 @@ div.ui-datepicker{
 .green a {
     color: green;
 }
+
+.hidden {
+    visibility: hidden;
+}

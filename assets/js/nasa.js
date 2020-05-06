@@ -3,6 +3,13 @@ let main = document.getElementById('main');
 
 function fetchNearEarthObjects() {
   event.preventDefault();
+  $('#main').show();
+  $('#map-id').hide();
+  $('.description').html('');
+  $('.description').html('<div class="description">'
+  + '<p>NEOO is an application that lets you search for any objects that were near Earth on any given date! '
+    + 'These objects range from asteroids to comets and when displayed the user can see the object\'s name, estimated diameter, if the object is potentially dangerous to us and a link to a detailed JPL NASA website of that object. This JPL website includes an amazing diagram comparing the objects orbit to our planet\'s orbit around the sun.' 
+    + 'Enter a date and try it for yourself!</p></div>')
   let date = document.getElementById('searchDate').value;
   console.log("date="+date);
       fetch('https://api.nasa.gov/neo/rest/v1/feed?start_date='+date+'&end_date='+date+

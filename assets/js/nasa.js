@@ -18,6 +18,8 @@ function fetchNearEarthObjects() {
         let neoLength = response.near_earth_objects[date].length;
         console.log("neo = "+neoLength);
 
+        $('#main').html('');
+
         for (let x = 0; x < neoLength; x++) {
           // Create Card Div 
           $('#main').append('<div id='+x+' class="card cell small-6 large-4"></div>');
@@ -32,6 +34,16 @@ function fetchNearEarthObjects() {
           minRef = diamRef.estimated_diameter_min.toFixed(2);
           maxRef = diamRef.estimated_diameter_max.toFixed(2);
           $('#'+x).append('<div class="card-section">Diameter between '+minRef+' and '+maxRef+' meters.</div>')
+
+          let hazardous = response.near_earth_objects[date][x].is_potentially_hazardous_asteroid
+          if (hazardous == true) {
+            $('#'+x).addClass('red')
+            hazardous = 'Yes!';
+          }  else {
+            hazardous = 'No.';
+          }
+          $('#'+x).append('<div class="card-section">Is it hazardous to us? '+hazardous+ '</div>')
+          // console.log(hazardous);
 
           // JPL URL
           var url = response.near_earth_objects[date][x].nasa_jpl_url;

@@ -63,11 +63,25 @@ div.ui-datepicker{
     
 }
 
+.title-description {
+    font-family: 'Oswald', sans-serif;
+    color: honeydew;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
 .description {
-    color: white;
+    font-family: 'Oswald', sans-serif;
+    color: honeydew;
+    text-align: center;
+    margin: 30px;
 }
 
 .main-body {
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.red {
+    border: red 1px solid;
 }

@@ -39,6 +39,7 @@ function ISStracker() {
     $('#map-id').show();
     $('#main').hide();
     moveISS();
+    flyoverDate();
 }
 
 function hideISS() {
@@ -46,3 +47,33 @@ function hideISS() {
 }
 
 hideISS();
+
+function flyoverDate() {
+    let location = document.getElementById('searchLocation').value;
+    
+    fetch('https://api.openweathermap.org/data/2.5/weather?q=' 
+      + location
+      + ',us&APPID=38502b70b289d62a156e29aa933997f8&units=imperial')
+    .then((response) => {
+      return response.json();
+    })
+    .then((response) => {
+        let lon = response.coord.lon;
+        let lat = response.coord.lat;
+        let url = "http://api.open-notify.org/iss-pass.json?lat="+lat+"&lon="+lon;
+        console.log(url);
+        return fetch(url);
+        //+'&alt=20&n=5');//, function(data) {
+            //data['response'].forEach(function (d) {
+            //    var date = new Date(d['risetime']*1000);
+            //     $('#isspass').append('<li>' + date.toString() + '</li>');
+            //});
+        //})
+    })
+    .then((issResponse) => {
+        return issResponse.json();
+    })
+    .then ((issResponse) => {
+        
+    });
+}

@@ -23,7 +23,6 @@ function fetchNearEarthObjects() {
         // create indiv containers for each data object
 
         let neoLength = response.near_earth_objects[date].length;
-        console.log("neo = "+neoLength);
 
         $('#main').html('');
 
@@ -35,6 +34,11 @@ function fetchNearEarthObjects() {
           // Name of Object
           var name = response.near_earth_objects[date][x].name;
           $('#'+x).html('<div class="card-divider">'+name+'</div>');
+
+          // Speed
+          let speedRef = response.near_earth_objects[date][x].close_approach_data[0].relative_velocity
+          speed = +speedRef.miles_per_hour;
+          $('#'+x).append('<div class="card-section">Speed ' + speed.toFixed(2) + ' km/h');
 
           // Diameter 
           let diamRef = response.near_earth_objects[date][x].estimated_diameter.meters

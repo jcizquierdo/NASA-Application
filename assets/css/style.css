@@ -1,0 +1,120 @@
+.background {
+    background: url("../images/space.jpg") no-repeat center fixed;
+    background-size: cover;
+}
+
+#map-id {
+    height: 450px;
+    width: auto;
+}
+
+.top-bar {
+    background: transparent;
+}
+
+.top-bar-right {
+    display: inline-flex;
+    margin-top: 30px;
+    font-family: 'Oswald', sans-serif;
+}
+
+.title {
+    font-size: 60px;
+    font-family: 'Oswald', sans-serif;
+    color: honeydew;
+}
+
+.enter-date {
+    color: honeydew;
+    margin-right: 10px;
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.enter-location {
+    color: honeydew;
+    margin-right: 10px;
+    font-size: 20px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.button {
+    background: transparent;
+    border-radius: 10px;
+}
+
+
+.search-box {
+    width: 98px;
+    background: transparent;
+    border-radius: 10px;
+    color: rgb(98, 98, 250);
+}
+
+.location-box {
+    width: 98px;
+    background: transparent;
+    border-radius: 10px;
+    color: rgb(98, 98, 250);
+}
+
+.container {
+    margin-top: 180px;
+}
+
+div.ui-datepicker{
+    font-size:10px;
+   }
+
+.card {
+    background-color: transparent;
+    font-family: 'Oswald', sans-serif;
+    color: honeydew;
+}
+
+.card-divider {
+    background-color: rgb(37, 35, 35);
+    
+}
+
+.title-description {
+    font-family: 'Oswald', sans-serif;
+    color: honeydew;
+    margin-left: 20px;
+    font-size: 30px;
+}
+
+.description {
+    font-family: 'Oswald', sans-serif;
+    color: honeydew;
+    text-align: center;
+    margin: 30px;
+}
+
+.main-body {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.red {
+    border: red 1px solid;
+    
+}
+
+.red a {
+    color: red;
+}
+
+.green {
+    border: green 1px solid;
+}
+
+.green a {
+    color: green;
+}
+
+.hidden {
+    visibility: hidden;
+}

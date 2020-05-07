@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NEOO</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="/assets/images/planet-icon.png"/>
     <!-- Foundation Stylesheet -->
     <link rel="stylesheet" href="assets/css/foundation/foundation.min.css">
     <!-- Foundation Compressed CSS -->
@@ -26,14 +28,13 @@
             </div>
             <div class="top-bar-right" id="search-form">
                 <!-- Location ISS input -->
-                <div class="enter-location">Track the ISS!</div>
                 <!-- <input type="text" id="searchLocation" placeholder="City Name" class="location-box"> -->
-                <input type="submit" class="button" value="Click Here" onclick="ISStracker()">
+                <input id="issBTN" type="submit" class="button" value="Track the ISS!" onclick="ISStracker()">
                 <!-- Date JBL input -->
                 <div class="enter-date">Enter Date</div>
-                <input type="text" id="searchDate" placeholder="YYYY-MM-DD" class="search-box">
-                <input type="submit" class="button" value="Search" onclick="fetchNearEarthObjects()">
-            </div>
+                    <input type="text" id="searchDate" placeholder="YYYY-MM-DD" class="search-box">
+                    <input type="submit" class="button" value="Search" onclick="fetchNearEarthObjects()">
+                </div>
         </div>
         <div class="main-body">
         <!-- description paragraph -->

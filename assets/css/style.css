@@ -6,6 +6,7 @@
 #map-id {
     height: 450px;
     width: auto;
+    margin-top: 80px;
 }
 
 .top-bar {
@@ -117,4 +118,13 @@ div.ui-datepicker{
 
 .hidden {
     visibility: hidden;
+}
+
+#issBTN {
+    font-size: 18px;
+    margin-top: -3px;
+}
+
+.description {
+    font-size: 22px;    
 }

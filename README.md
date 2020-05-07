@@ -6,4 +6,4 @@
 # 
 ## This application was built from scratch using Foundation, Html/CSS, Javascript, Open Notify ISS-Now API, and NASA NeoWS API.
 
-![image](assets/images/readme-img)
+![image](assets/images/readme-img.png)

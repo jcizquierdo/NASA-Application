@@ -35,7 +35,7 @@ function moveISS () {
 }
 
 function ISStracker() {
-    $('.description').html('<p>Welcome to the ISS Tracker</p>')
+    $('.description').html("<p>Welcome to the International Space Station Tracker! This map will show you the ISS's current location.</p>")
     $('#map-id').show();
     $('#main').hide();
     moveISS();

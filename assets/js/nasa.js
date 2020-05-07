@@ -59,7 +59,7 @@ function fetchNearEarthObjects() {
 
           // JPL URL
           var url = response.near_earth_objects[date][x].nasa_jpl_url;
-          $('#'+x).append('<div class="card-section"><a href="'+url+'">JPL Link</a></div>')
+          $('#'+x).append('<div class="card-section"><a target="_blank" href="'+url+'">JPL Link</a></div>')
         }
         
       });

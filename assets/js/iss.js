@@ -20,7 +20,8 @@ map.setView([0, 0], 2);
 // ISS Lat and Lon Condition API
 
 function moveISS () {
-    $.getJSON('http://api.open-notify.org/iss-now.json?callback=?', function(data) {
+    $.getJSON('http://api.open-notify.org/iss-now.json?callback=?', 
+    function(data) {
         var lat = data['iss_position']['latitude'];
         var lon = data['iss_position']['longitude'];
 
@@ -39,7 +40,7 @@ function ISStracker() {
     $('#map-id').show();
     $('#main').hide();
     moveISS();
-    flyoverDate();
+    //flyoverDate();
 }
 
 function hideISS() {

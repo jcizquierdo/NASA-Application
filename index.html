@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>NEOO</title>
     <!-- Favicon -->
-    <link rel="shortcut icon" type="image/png" href="/assets/images/planet-icon.png"/>
+    <link rel="shortcut icon" type="image/png" href="assets/images/planet-icon.png"/>
     <!-- Foundation Stylesheet -->
     <link rel="stylesheet" href="assets/css/foundation/foundation.min.css">
     <!-- Foundation Compressed CSS -->
@@ -24,12 +25,12 @@
         <!-- nav bar -->
         <div class="top-bar">
             <div class="top-bar-left">
-                <span class="title">NEOO</span><span class="title-description">(Near Earth Orbiting Objects)</span>
+                <a href="./" class="title">NEOO</a><span class="title-description">(Near Earth Orbiting Objects)</span>
             </div>
             <div class="top-bar-right" id="search-form">
                 <!-- Location ISS input -->
                 <!-- <input type="text" id="searchLocation" placeholder="City Name" class="location-box"> -->
-                <input id="issBTN" type="submit" class="button" value="Track the ISS!" onclick="ISStracker()">
+                <!-- <input id="issBTN" type="submit" class="button" value="Track the ISS!" onclick="apod()"> -->
                 <!-- Date JBL input -->
                 <div class="enter-date">Enter Date</div>
                     <input type="text" id="searchDate" placeholder="YYYY-MM-DD" class="search-box">
@@ -44,16 +45,18 @@
             <!-- grid -->
             <div class="grid-x grid-margin-x small-up-2 medium-up-3 main"  id="main"></div>
         </div>
-        <!-- ISS map -->
-        <div class="container" id="map-id"></div>
+        <!-- Image of the Day -->
+        <div class="container" id="apod-img"></div>
 
 
         <!-- script links -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-        <script src="./assets/js/iss.js"></script>
-        <script src="./assets/js/nasa.js"></script>
-        <script src="./assets/js/script.js"></script>
         <script type="text/javascript" src="assets/jquery-3.5.0.min.js"></script>
         <script type="text/javascript" src="assets/jquery-ui.min.js"></script>
+
+        <script src="./assets/js/nasa.js"></script>
+        <script src="./assets/js/script.js"></script>
+        <script src="./assets/js/apod.js"></script>
+
     </body>
 </html>

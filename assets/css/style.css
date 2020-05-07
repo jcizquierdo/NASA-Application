@@ -1,11 +1,12 @@
 .background {
     background: url("../images/space.jpg") no-repeat center fixed;
     background-size: cover;
+    padding-bottom: 0px;
 }
 
 #map-id {
     height: 450px;
-    width: auto;
+    margin: auto;
     margin-top: 80px;
 }
 
@@ -62,7 +63,7 @@
 }
 
 .container {
-    margin-top: 180px;
+    margin-top: 40px;
 }
 
 div.ui-datepicker{
@@ -109,11 +110,11 @@ div.ui-datepicker{
 }
 
 .green {
-    border: green 1px solid;
+    border: rgb(10, 226, 10) 1px solid;
 }
 
 .green a {
-    color: green;
+    color: rgb(10, 226, 10);
 }
 
 .hidden {
@@ -127,4 +128,49 @@ div.ui-datepicker{
 
 .description {
     font-size: 22px;    
+}
+
+#apod-img {
+    color: white;
+}
+
+#apod-img p {
+    width: 40%;
+    float: left;
+    margin-left: 20px;
+    background-color: rgb(22, 22, 22);
+    text-align: center;
+    border: 1px solid white;
+    padding: 5px;
+}
+
+#apod-img img {
+    float: right;
+    width: 55%;
+    margin-right: 20px;
+    border: 1px solid white;
+}
+
+.apod-head {
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+#apod-img h2 {
+    border-top: 1px solid white;
+    padding-bottom: 0;
+    padding-top: 10px;
+}
+
+.copyright {
+    float: right;
+    width: 50%;
+    text-align: right;
+    padding-right: 20px;
+    display: block;
+}
+
+.apod-main {
+    display: inline-block;
+    padding-bottom: 40px;
 }

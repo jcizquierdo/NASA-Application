@@ -4,7 +4,7 @@ let main = document.getElementById('main');
 function fetchNearEarthObjects() {
   event.preventDefault();
   $('#main').show();
-  $('#map-id').hide();
+  $('#apod-img').hide();
   $('.description').html('');
   $('.description').html('<div class="description">'
   + '<p>NEOO is an application that lets you search for any objects that were near Earth on any given date! '

@@ -25,15 +25,18 @@
         <!-- nav bar -->
         <div class="top-bar">
             <div class="top-bar-left">
-                <a href="./" class="title">NEOO</a><span class="title-description">(Near Earth Orbiting Objects)</span>
+                <a href="./index.html" class="title">NEOO</a><span class="title-description">(Near Earth Orbiting Objects)</span>
             </div>
+
+            <!-- Dropdown bar for local storage -->
+            <!-- <div class="top-bar-right">
+                <input type="submit" class="button" value="Recent Searches" onclick="recentSearch()">
+            </div> -->
+
             <div class="top-bar-right" id="search-form">
-                <!-- Location ISS input -->
-                <!-- <input type="text" id="searchLocation" placeholder="City Name" class="location-box"> -->
-                <!-- <input id="issBTN" type="submit" class="button" value="Track the ISS!" onclick="apod()"> -->
                 <!-- Date JBL input -->
                 <div class="enter-date">Enter Date</div>
-                    <input type="text" id="searchDate" placeholder="YYYY-MM-DD" class="search-box">
+                    <input type="text" id="searchDate" placeholder="YYYY-MM-DD" class="search-box" autocomplete="off">
                     <input type="submit" class="button" value="Search" onclick="fetchNearEarthObjects()">
                 </div>
         </div>

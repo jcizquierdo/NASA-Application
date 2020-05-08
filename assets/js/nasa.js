@@ -1,7 +1,28 @@
 let main = document.getElementById('main');
+var searchedDates = [];
+let date = '';
 
+// Local Storage get item
+if (localStorage.getItem("savedDate") == null) {
+  recentSearches = [];
+} else {
+  recentSearches = JSON.parse(localStorage.getItem("savedDate"));
+  recentSearches = recentSearches.join().split(',');
+}
 
-function fetchNearEarthObjects() {
+function recentSearch() {
+  $('#main').html('');
+  $('#main').append('<div id="recents"><h3>Recent Searches</h3></div>')
+  for (n in recentSearches) {
+    recent = (recentSearches[n])
+    $('#recents').append(
+      '<button id="btn'+n+'" type="button" class="button" onclick="fetchNearEarthObjects('+n+')">'+recentSearches[n]+'</button>'
+    )}
+}
+
+recentSearch();
+
+function fetchNearEarthObjects(param) {
   event.preventDefault();
   $('#main').show();
   $('#apod-img').hide();
@@ -10,7 +31,24 @@ function fetchNearEarthObjects() {
   + '<p>NEOO is an application that lets you search for any objects that were near Earth on any given date! '
     + 'These objects range from asteroids to comets and when displayed the user can see the object\'s name, estimated diameter, if the object is potentially dangerous to us and a link to a detailed JPL NASA website of that object. This JPL website includes an amazing diagram comparing the objects orbit to our planet\'s orbit around the sun.' 
     + 'Enter a date and try it for yourself!</p></div>')
-  let date = document.getElementById('searchDate').value;
+  if (param === undefined) {
+    date = document.getElementById('searchDate').value;
+  } else {
+    date = $('#btn'+param).text();
+    $('#searchDate').val(date);
+  }
+
+  // Save to local storage
+  if (recentSearches.includes(date)) {
+  } else {
+    // Makes local storage max length = 5
+    if (recentSearches.length = 5) {
+      recentSearches.shift();
+    }
+    recentSearches.push(date);
+    let saving = JSON.stringify(recentSearches);
+    localStorage.setItem("savedDate", saving);
+  }
   console.log("date="+date);
       fetch('https://api.nasa.gov/neo/rest/v1/feed?start_date='+date+'&end_date='+date+
         '&api_key=58quQOPaEHya8ShD5JVzTSjU2Ece7FNGSAFe9rVT')
@@ -65,4 +103,8 @@ function fetchNearEarthObjects() {
       });
 }
 
-// Add if hazardous or not
+
+// Add local storage to show past researched dates.
+    // Maybe a dropdown that shows previous dates
+
+// Also get rid of default chrome storage

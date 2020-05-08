@@ -7,12 +7,20 @@ if (localStorage.getItem("savedDate") == null) {
   recentSearches = [];
 } else {
   recentSearches = JSON.parse(localStorage.getItem("savedDate"));
-  recentSearches = recentSearches.join().split(',');
+
+  // Remove empty and null array values.
+  recentSearches = recentSearches.filter(function (el) {
+    return el != null && el != "";
+});
+  
 }
 
 function recentSearch() {
   $('#main').html('');
-  $('#main').append('<div id="recents"><h3>Recent Searches</h3></div>')
+  $('#main').append('<div id="recents"><h4>Recent Searches</h4></div>')
+  if (recentSearches.length ==  0) {
+    $('#recents').append('<p>Your recent searches will appear here!</p>')
+  } 
   for (n in recentSearches) {
     recent = (recentSearches[n])
     $('#recents').append(
@@ -42,13 +50,14 @@ function fetchNearEarthObjects(param) {
   if (recentSearches.includes(date)) {
   } else {
     // Makes local storage max length = 5
-    if (recentSearches.length = 5) {
+    if (recentSearches.length == 5) {
       recentSearches.shift();
     }
     recentSearches.push(date);
     let saving = JSON.stringify(recentSearches);
     localStorage.setItem("savedDate", saving);
   }
+
   console.log("date="+date);
       fetch('https://api.nasa.gov/neo/rest/v1/feed?start_date='+date+'&end_date='+date+
         '&api_key=58quQOPaEHya8ShD5JVzTSjU2Ece7FNGSAFe9rVT')
@@ -102,9 +111,3 @@ function fetchNearEarthObjects(param) {
         
       });
 }
-
-
-// Add local storage to show past researched dates.
-    // Maybe a dropdown that shows previous dates
-
-// Also get rid of default chrome storage

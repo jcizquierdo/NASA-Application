@@ -1,8 +1,9 @@
 .background {
-    background: url("../images/space.jpg") no-repeat center fixed;
+    background: url("../images/astronomy-astrophotography-clouds-colors-755726.jpg") no-repeat center fixed;
     background-size: cover;
-    padding-bottom: 0px;
+    padding-bottom: 80px;
 }
+
 
 #map-id {
     height: 450px;
@@ -18,12 +19,20 @@
     display: inline-flex;
     margin-top: 30px;
     font-family: 'Oswald', sans-serif;
+    min-width: 30%;
+    padding: 0 20px;
+    position: relative;
+}
+
+.top-bar-left {
+    min-width: 75%;
 }
 
 .title {
     font-size: 60px;
     font-family: 'Oswald', sans-serif;
     color: honeydew;
+    margin: 0 20px;
 }
 
 .enter-date {
@@ -45,6 +54,8 @@
 .button {
     background: transparent;
     border-radius: 10px;
+    border: 1px solid white;
+    min-width: 10%;
 }
 
 
@@ -82,9 +93,14 @@ div.ui-datepicker{
 }
 
 .title-description {
+    min-width: 40%;
+    max-width: 60%;
+    margin: auto;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
     font-family: 'Oswald', sans-serif;
     color: honeydew;
-    margin-left: 20px;
+    border-bottom: 1px solid white;
     font-size: 30px;
 }
 
@@ -94,6 +110,7 @@ div.ui-datepicker{
     text-align: center;
     margin: 30px;
 }
+
 
 .main-body {
     padding-left: 20px;
@@ -126,8 +143,8 @@ div.ui-datepicker{
     margin-top: -3px;
 }
 
-.description {
-    font-size: 22px;    
+.description p {
+    font-size: 20px;    
 }
 
 #apod-img {
@@ -185,4 +202,37 @@ div.ui-datepicker{
         width: 100%;
         margin: auto;
     }
+}
+
+#recents {
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: white;
+}
+
+#recents .button {
+    font-size: 24px;
+    border: 1px solid white;
+    margin: 20px 10px;
+}
+
+@media only screen and (max-width: 640px) {
+    .top-bar-right {
+        justify-content: center;
+
+    }
+    .top-bar-left {
+        text-align: center;
+    }
+    .title {
+        display: block;
+    }
+}
+
+.card-divider {
+    background-color: rgb(30, 32, 46, 0.6);
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 500;
 }

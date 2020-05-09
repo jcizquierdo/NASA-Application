@@ -25,21 +25,25 @@
         <!-- nav bar -->
         <div class="top-bar">
             <div class="top-bar-left">
-                <a href="./" class="title">NEOO</a><span class="title-description">(Near Earth Orbiting Objects)</span>
+                <a href="./index.html" class="title">NEOO</a>
             </div>
+
+            <!-- Dropdown bar for local storage -->
+            <!-- <div class="top-bar-right">
+                <input type="submit" class="button" value="Recent Searches" onclick="recentSearch()">
+            </div> -->
+
             <div class="top-bar-right" id="search-form">
-                <!-- Location ISS input -->
-                <!-- <input type="text" id="searchLocation" placeholder="City Name" class="location-box"> -->
-                <!-- <input id="issBTN" type="submit" class="button" value="Track the ISS!" onclick="apod()"> -->
                 <!-- Date JBL input -->
                 <div class="enter-date">Enter Date</div>
-                    <input type="text" id="searchDate" placeholder="YYYY-MM-DD" class="search-box">
+                    <input type="text" id="searchDate" placeholder="YYYY-MM-DD" class="search-box" autocomplete="off">
                     <input type="submit" class="button" value="Search" onclick="fetchNearEarthObjects()">
                 </div>
         </div>
         <div class="main-body">
         <!-- description paragraph -->
             <div class="description">
+                <h3 class="title-description">Near Earth Orbiting Objects</h3>
                 <p>NEOO is an application that lets you search for any objects that were near Earth on any given date! These objects range from asteroids to comets and when displayed the user can see the object's name, estimated diameter, if the object is potentially dangerous to us and a link to a detailed JPL NASA website of that object. This JPL website includes an amazing diagram comparing the objects orbit to our planet's orbit around the sun. Enter a date and try it for yourself!</p>
             </div>
             <!-- grid -->
